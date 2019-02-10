@@ -1,0 +1,52 @@
+@import 'palette';
+
+.App {
+  text-align: center;
+  font-family: 'PT Serif', serif;
+  background-color: $background-color1;
+
+  h1 {
+    color: $text-color1;
+    text-decoration: underline solid $text-color1;
+    font-style: italic;
+    font-size: 36px;
+    font-weight:400;
+  }
+
+  h2 {
+    color: $text-color2;
+    text-decoration: underline solid $text-color2;
+    font-style: italic;
+    font-size: 36px;
+    font-weight:400;
+  }
+
+  h3 {
+    color: $text-color2;
+    text-decoration: underline solid $green-color1;
+    font-style: italic;
+    font-size: 36px;
+    font-weight:400;
+  }
+
+  h4 {
+    color: $text-color1;
+    text-decoration: underline solid $green-color1;
+    font-style: italic;
+    font-size: 36px;
+    font-weight:400;
+  }
+  #holder {
+    margin: 0 25em 0 25em;
+    border: 1px solid $green-color1;
+  }
+  p {
+      margin: 3em;
+  }
+  #pcolor1 {
+    color: $text-color2;
+  }
+  #pcolor2 {
+    color: $text-color1;
+  }
+}
