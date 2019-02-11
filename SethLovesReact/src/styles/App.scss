@@ -1,0 +1,27 @@
+@import 'palette';
+
+.App {
+  text-align: center;
+  font-family: 'PT Serif', serif;
+  background-color: $background-color1;
+
+  h1 {
+    color: $text-color1;
+    text-decoration: underline solid $green-color1;
+    font-style: italic;
+    font-size: 3em;
+    font-weight:400;
+  }
+
+  #holder {
+    margin: 0 25em 0 25em;
+    border: 1px solid $text-color1;
+  }
+
+  p {
+      font-size: 1em;
+      margin: 3em;
+      color: $text-color2;
+  }
+
+}
