@@ -19,6 +19,8 @@ export const testReview: IReviewInfo = {
   description: "Family-friendly Greek-style pizzeria with pies, pastas, sandwiches & Greek items plus patio seating.",
   reviewBody: "This is the body of the review This is the body of the review This is the body of the review This is the body of the review This is the body of the review This is the body of the review This is the body of the review This is the body of the review This is the body of the review This is the body of the review This is the body of the review This is the body of the review This is the body of the review This is the body of the review This is the body of the review This is the body of the review This is the body of the review This is the body of the review ",
   imageURL: "dont worry yet",
-  dateEaten: Date,
+  dateEaten: new Date(),
   didSethLovePizza: true,
 }
+
+export const testGetReviewsResponse: Array<IReviewInfo> = Array(4).fill(testReview);
