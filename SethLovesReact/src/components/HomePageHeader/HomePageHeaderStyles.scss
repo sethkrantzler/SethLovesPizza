@@ -1,0 +1,23 @@
+@import '../../styles/palette.scss';
+
+.home-page-header-title {
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: 3.3em;
+    color: wheat;
+    letter-spacing: 2px;
+    text-shadow: 2px -2px 0px #969696, 4px -4px 0px #2d2d2d;
+}
+
+.home-page-header-description {
+    margin: 1em 30%;
+    color: $text-color1;
+}
+
+.home-page-header-divider {
+    margin: 0 10%;
+    border: none;
+    border-top: medium double $text-color2;
+    color: $text-color2;
+    text-align: center;
+}

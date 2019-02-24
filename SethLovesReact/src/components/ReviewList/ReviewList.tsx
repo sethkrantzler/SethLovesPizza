@@ -1,5 +1,5 @@
 import React from 'react';
-import {ReviewCard, IReviewInfo} from './ReviewCard';
+import {ReviewCard, IReviewInfo} from '../ReviewCard/ReviewCard';
 
 export interface IReviewListProps {
     reviewList: Array<IReviewInfo>
