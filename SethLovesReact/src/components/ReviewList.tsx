@@ -27,9 +27,7 @@ export default class ReviewList extends React.Component<IReviewListProps, any> {
         for (var i = 0; i < reviewList.length ; i++) {
             const component: JSX.Element =
                 <div id="holder" key={`id-${i}`}>
-                    <br></br>
                     <ReviewCard reviewInfo = {reviewList[i]}/>
-                    <br></br>
                 </div>
             componentsArray.push(component);
         }

@@ -29,6 +29,7 @@ export class ReviewCard extends React.Component<IReviewCardProps, any> {
       <h1>{ this.props.reviewInfo.name }</h1>
       <h2>{ this.props.reviewInfo.address }</h2>
       <h3>{ this.props.reviewInfo.neighborhoodLoc }</h3>
+      <img src={this.props.reviewInfo.imageURL}/>
       <p id="pcolor2">{ this.props.reviewInfo.description }</p>
       <p id="pcolor2">{ this.props.reviewInfo.reviewBody }</p>
       <ReviewCardRatingSection ratingValues={this.props.reviewInfo.ratingVal}/>

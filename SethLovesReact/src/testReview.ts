@@ -18,7 +18,7 @@ export const testReview: IReviewInfo = {
   ratingVal: ratingObject,
   description: "Family-friendly Greek-style pizzeria with pies, pastas, sandwiches & Greek items plus patio seating.",
   reviewBody: "This is the body of the review This is the body of the review This is the body of the review This is the body of the review This is the body of the review This is the body of the review This is the body of the review This is the body of the review This is the body of the review This is the body of the review This is the body of the review This is the body of the review This is the body of the review This is the body of the review This is the body of the review This is the body of the review This is the body of the review This is the body of the review ",
-  imageURL: "dont worry yet",
+  imageURL: "http://www.pmq.com/images/cache/cache_b/cache_3/cache_8/styling-lead-3ae7783b.jpeg?ver=1493261046&aspectratio=1.5009380863039",
   dateEaten: new Date(),
   didSethLovePizza: true,
 }
