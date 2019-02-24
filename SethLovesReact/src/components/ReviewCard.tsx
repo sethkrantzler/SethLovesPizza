@@ -17,7 +17,7 @@ export interface IReviewInfo {
   dateEaten: Date;
   didSethLovePizza: boolean;
 }
-export default class ReviewCard extends React.Component<IReviewCardProps, any> {
+export class ReviewCard extends React.Component<IReviewCardProps, any> {
   constructor(props: IReviewCardProps) {
     super(props);
     console.log(props);
