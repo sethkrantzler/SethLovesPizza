@@ -7,6 +7,7 @@ const ratingObject: IRatingObject = {
   tasteVal: 5,
   decorVal: 3,
   boxVal: 4,
+  overallVal: 5
 }
 
 export const testReview: IReviewInfo = {
