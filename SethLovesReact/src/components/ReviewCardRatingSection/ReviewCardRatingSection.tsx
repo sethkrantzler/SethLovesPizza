@@ -9,6 +9,7 @@ export interface IRatingObject {
   tasteVal: number;
   decorVal: number;
   boxVal: number;
+  overallRating: number;
 }
 export class ReviewCardRatingSection extends React.Component<IRatingSectionProps, any> {
   constructor(props: IRatingSectionProps) {
@@ -22,6 +23,7 @@ export class ReviewCardRatingSection extends React.Component<IRatingSectionProps
         <p>{this.props.ratingValues.tasteVal}/5</p>
         {this.props.ratingValues.decorVal   ? <p>{this.props.ratingValues.decorVal}/5</p> : null}
         {this.props.ratingValues.boxVal     ? <p>{this.props.ratingValues.boxVal}/5</p> : null}
+        {this.props.ratingValues.overallRating     ? <p>{this.props.ratingValues.overallRating}/5</p> : null}
       </div>
     );
   }
