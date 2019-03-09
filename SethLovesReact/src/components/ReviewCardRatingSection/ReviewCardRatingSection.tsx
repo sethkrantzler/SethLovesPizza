@@ -1,16 +1,13 @@
 import React from 'react';
 
 export interface IRatingSectionProps {
-  ratingValues: IRatingObject;
-}
-
-export interface IRatingObject {
   priceVal: number;
   tasteVal: number;
   decorVal: number;
   boxVal: number;
   overallVal: number;
 }
+
 export class ReviewCardRatingSection extends React.Component<IRatingSectionProps, any> {
   constructor(props: IRatingSectionProps) {
     super(props);
@@ -19,11 +16,11 @@ export class ReviewCardRatingSection extends React.Component<IRatingSectionProps
   public render() {
     return (
       <div>
-        <p>{this.props.ratingValues.priceVal}/5</p>
-        <p>{this.props.ratingValues.tasteVal}/5</p>
-        {this.props.ratingValues.decorVal   ? <p>{this.props.ratingValues.decorVal}/5</p> : null}
-        {this.props.ratingValues.boxVal     ? <p>{this.props.ratingValues.boxVal}/5</p> : null}
-        {this.props.ratingValues.overallVal     ? <p>{this.props.ratingValues.overallVal}/5</p> : null}
+        <p>{this.props.priceVal}/5</p>
+        <p>{this.props.tasteVal}/5</p>
+        {this.props.decorVal   ? <p>{this.props.decorVal}/5</p> : null}
+        {this.props.boxVal     ? <p>{this.props.boxVal}/5</p> : null}
+        {this.props.overallVal     ? <p>{this.props.overallVal}/5</p> : null}
       </div>
     );
   }

@@ -1,78 +1,60 @@
 import React from 'react';
-import {IRatingObject, ReviewCardRatingSection} from '../ReviewCardRatingSection/ReviewCardRatingSection';
+import {ReviewCardRatingSection} from '../ReviewCardRatingSection/ReviewCardRatingSection';
 import './ReviewCardStyles.scss';
 
 export interface IReviewCardProps {
-  reviewInfo: IReviewInfo
-}
-
-// export class ReviewInfo implements IReviewInfo {
-//   [key: string]: string|boolean|IRatingObject|Date;
-//   name: string = "";
-//   address: string = "";
-//   neighborhoodLoc: string= "";
-//   hasDelivery: boolean = false;
-//   ratingVal: IRatingObject = {
-//     priceVal: 0,
-//     boxVal: 0,
-//     decorVal: 0,
-//     tasteVal: 0,
-//     overallVal: 0
-//   };
-//   description: string= "";
-//   reviewBody: string= "";
-//   imageURL: string= "";
-//   dateEaten: Date = new Date('1995-12-17T03:24:00');;
-//   didSethLovePizza: boolean = false;
-
-//   ReviewInfo(name: string, address: string, neighborhoodLoc: string, hasDelivery: boolean, 
-//     ratingVal: IRatingObject, description: string, reviewBody: string, imageURL: string, 
-//     dateEaten: Date, didSethLovePizza: boolean) {
-//       this.name = name;
-//       this.address = address;
-//       this.neighborhoodLoc = neighborhoodLoc;
-//       this.hasDelivery = hasDelivery;
-//       this.ratingVal = ratingVal;
-//       this.description = description;
-//       this.reviewBody = reviewBody;
-//       this.imageURL = imageURL;
-//       this. dateEaten = dateEaten;
-//       this.didSethLovePizza = didSethLovePizza;
-//     }
-// }
-export interface IReviewInfo {
   name: string;
   address: string;
   neighborhoodLoc: string;
   hasDelivery: boolean;
-  ratingVal: IRatingObject;
+  rating: JSX.Element;
   description: string;
   reviewBody: string;
   imageURL: string;
   dateEaten: Date;
   didSethLovePizza: boolean;
-  [key: string]: string|boolean|IRatingObject|Date;
 }
+
 export class ReviewCard extends React.Component<IReviewCardProps, any> {
+
+  private ReviewRef = React.createRef<HTMLDivElement>();
+
   constructor(props: IReviewCardProps) {
     super(props);
-    console.log(props);
+    this.state = {isOpen: false, className: "review-card-closed"};
+    this.OnPizzaBoxClick = this.OnPizzaBoxClick.bind(this);
   }
+
+  scrollToRef = () => {
+      if (!this.ReviewRef.current) return;
+      window.scrollTo(0, this.ReviewRef.current.getBoundingClientRect().top + window.pageYOffset);
+      
+  };
+
+  OnPizzaBoxClick() : void {
+    this.scrollToRef();
+    this.setState({isOpen: !this.state.isOpen, className: !this.state.isOpen ? "review-card-open" : "review-card-closed"});
+  }
+
 
   public render() {
     return (
-      <div className="review-card-holder">
-        <h1 className="review-card-name">{ this.props.reviewInfo.name }</h1>
-        <p className="review-card-description">{ this.props.reviewInfo.description }</p>
+      <div ref={this.ReviewRef} className={this.state.className} onClick={this.OnPizzaBoxClick}>
+        {!this.state.isOpen && <h1 className="review-card-name">{ this.props.name }</h1>}
+        {this.state.isOpen && 
         <div>
-          <img className="review-card-img" src={this.props.reviewInfo.imageURL}/>
-          <div className="review-card-location-info">
-            <div className="review-card-neighborhood">Neighborhood: { this.props.reviewInfo.neighborhoodLoc }</div>
-            <div className="review-card-address">{ this.props.reviewInfo.address }</div>
+          <h1 className="review-card-name">{ this.props.name }</h1>
+          <p className="review-card-description">{ this.props.description }</p>
+          <div>
+            <img className="review-card-img" src={this.props.imageURL}/>
+            <div className="review-card-location-info">
+              <div className="review-card-neighborhood">Neighborhood: { this.props.neighborhoodLoc }</div>
+              <div className="review-card-address">{ this.props.address }</div>
+            </div>
           </div>
-        </div>
-        <p className="review-card-review">{ this.props.reviewInfo.reviewBody }</p>
-        <ReviewCardRatingSection ratingValues={this.props.reviewInfo.ratingVal}/>
+        <p className="review-card-review">{ this.props.reviewBody }</p>
+        {this.props.rating}
+        </div>}
       </div>
     );
   }
