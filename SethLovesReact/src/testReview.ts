@@ -5,7 +5,6 @@ import {IReviewCardProps, IReviewInfo} from './components/ReviewCard/ReviewCard'
 const ratingObject: IRatingObject = {
   priceVal: 5,
   tasteVal: 5,
-  speedVal: 5,
   decorVal: 3,
   boxVal: 4,
 }
