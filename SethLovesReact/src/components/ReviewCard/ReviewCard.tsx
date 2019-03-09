@@ -6,6 +6,40 @@ export interface IReviewCardProps {
   reviewInfo: IReviewInfo
 }
 
+// export class ReviewInfo implements IReviewInfo {
+//   [key: string]: string|boolean|IRatingObject|Date;
+//   name: string = "";
+//   address: string = "";
+//   neighborhoodLoc: string= "";
+//   hasDelivery: boolean = false;
+//   ratingVal: IRatingObject = {
+//     priceVal: 0,
+//     boxVal: 0,
+//     decorVal: 0,
+//     tasteVal: 0,
+//     overallVal: 0
+//   };
+//   description: string= "";
+//   reviewBody: string= "";
+//   imageURL: string= "";
+//   dateEaten: Date = new Date('1995-12-17T03:24:00');;
+//   didSethLovePizza: boolean = false;
+
+//   ReviewInfo(name: string, address: string, neighborhoodLoc: string, hasDelivery: boolean, 
+//     ratingVal: IRatingObject, description: string, reviewBody: string, imageURL: string, 
+//     dateEaten: Date, didSethLovePizza: boolean) {
+//       this.name = name;
+//       this.address = address;
+//       this.neighborhoodLoc = neighborhoodLoc;
+//       this.hasDelivery = hasDelivery;
+//       this.ratingVal = ratingVal;
+//       this.description = description;
+//       this.reviewBody = reviewBody;
+//       this.imageURL = imageURL;
+//       this. dateEaten = dateEaten;
+//       this.didSethLovePizza = didSethLovePizza;
+//     }
+// }
 export interface IReviewInfo {
   name: string;
   address: string;
@@ -17,6 +51,7 @@ export interface IReviewInfo {
   imageURL: string;
   dateEaten: Date;
   didSethLovePizza: boolean;
+  [key: string]: string|boolean|IRatingObject|Date;
 }
 export class ReviewCard extends React.Component<IReviewCardProps, any> {
   constructor(props: IReviewCardProps) {
