@@ -1,0 +1,17 @@
+@import '../../styles/palette.scss';
+
+
+.rating-object{
+    background: $black-color1;
+    flex-basis: 33%;
+
+    p{
+        margin: 0;
+    }
+}
+
+.rating-holder{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
