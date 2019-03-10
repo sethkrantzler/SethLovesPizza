@@ -39,11 +39,11 @@ export class ReviewCard extends React.Component<IReviewCardProps, any> {
 
   public render() {
     return (
-      <div ref={this.ReviewRef} className={this.state.className} onClick={this.OnPizzaBoxClick}>
-        {!this.state.isOpen && <h1 className="review-card-name">{ this.props.name }</h1>}
+      <div ref={this.ReviewRef} className={this.state.className}>
+        {!this.state.isOpen && <h1 className="review-card-name" onClick={this.OnPizzaBoxClick}>{ this.props.name }</h1>}
         {this.state.isOpen && 
         <div>
-          <h1 className="review-card-name">{ this.props.name }</h1>
+          <h1 className="review-card-name" onClick={this.OnPizzaBoxClick}>{ this.props.name }</h1>
           <p className="review-card-description">{ this.props.description }</p>
           <div>
             <img className="review-card-img" src={this.props.imageURL}/>
@@ -51,8 +51,8 @@ export class ReviewCard extends React.Component<IReviewCardProps, any> {
               <div className="review-card-neighborhood">Neighborhood: { this.props.neighborhoodLoc }</div>
               <div className="review-card-address">{ this.props.address }</div>
             </div>
+            <p className="review-card-review">{ this.props.reviewBody }</p>
           </div>
-        <p className="review-card-review">{ this.props.reviewBody }</p>
         {this.props.rating}
         </div>}
       </div>

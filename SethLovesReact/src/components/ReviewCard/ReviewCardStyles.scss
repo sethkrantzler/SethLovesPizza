@@ -2,12 +2,13 @@
 
 p {
     font-size: 1em;
-      margin: 3em;
+      margin: 2.5em;
       color: $text-color3;
+
 }
 
 .review-card-img {
-    width: 50%;
+    width: 60%;
 }
 
 .review-card-name {
@@ -28,6 +29,7 @@ p {
 
 .review-card-closed {
     margin: 0 20% 0 20%;
+    border: 4px solid transparent;
     background-image: url('./PizzaBox.png');
     background-size: 100%;
     transition: all 0.5s ease;
@@ -43,10 +45,10 @@ p {
 
 .review-card-open {
     margin: 0 20% 0 20%;
-    border: 4px solid $black-color1;
-    background-color: $background-color2;
-    box-shadow: 0px 0px 10px 2px;
-    transition: background-color 0.5s ease-in-out,
+    border: 4px solid #fbba72;
+    border-radius: 20px;
+    background-color: #9e9988;
+    transition:    border-radius 0.3s ease-in-out, 
     box-shadow 0.2s ease-in-out, border 0.5s ease-in-out;
     ;
 }
