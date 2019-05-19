@@ -52,3 +52,61 @@ p {
     box-shadow 0.2s ease-in-out, border 0.5s ease-in-out;
     ;
 }
+
+@media (min-device-width : 100px) 
+and (max-device-width : 1000px)  {
+    p {
+        font-size: 1em;
+        margin: 1em;
+        color: $text-color3;
+    
+    }
+    
+    .review-card-img {
+        width: 80%;
+    }
+    
+    .review-card-name {
+        color: $text-color3;
+        text-decoration: underline solid $green-color1;
+        font-style: italic;
+        font-size: 3em;
+        font-weight:400;
+        text-transform: uppercase;
+        text-shadow: 1px -1px 0px rgba(150, 150, 150, 1), 2px -2px 0px #2d2d2d;
+        margin:0;
+    }
+    
+    .review-card-description {
+        color: $text-color1;
+        font-size: 1.2em;
+    }
+    
+    .review-card-closed {
+        margin: 0 5% 0 5%;
+        border: 4px solid transparent;
+        background-image: url('./PizzaBox.png');
+        background-size: 100%;
+        transition: all 0.5s ease;
+    }
+    
+    .review-card-location-info {
+        width: 80%;
+        margin: 0 10% 30px 10%;
+        text-align: right;
+        color: $text-color2;
+        font-size: 0.8em;
+    }
+    
+    .review-card-open {
+        margin: 0 5% 0 5%;
+        border: 4px solid #fbba72;
+        border-radius: 20px;
+        background-color: #9e9988;
+        transition:    border-radius 0.3s ease-in-out, 
+        box-shadow 0.2s ease-in-out, border 0.5s ease-in-out;
+        ;
+    }
+}
+
+

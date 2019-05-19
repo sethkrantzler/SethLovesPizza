@@ -21,3 +21,29 @@
     color: $text-color1;
     text-align: center;
 }
+
+@media (min-device-width : 100px) 
+and (max-device-width : 1000px) { 
+    .home-page-header-title {
+        text-transform: uppercase;
+        font-style: italic;
+        font-size: 2em;
+        color: $text-color2;
+        letter-spacing: 2px;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, 2px -2px 0px #969696, 4px -4px 0px #2d2d2d;
+    }
+    
+    .home-page-header-description {
+        margin: 1em 10%;
+        color: $text-color2;
+    }
+    
+    .home-page-header-divider {
+        margin: 0 5%;
+        border: none;
+        border-top: medium double $text-color1;
+        color: $text-color1;
+        text-align: center;
+    }
+
+}

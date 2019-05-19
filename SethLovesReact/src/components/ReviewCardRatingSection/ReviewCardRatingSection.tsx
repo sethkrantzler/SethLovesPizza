@@ -1,5 +1,10 @@
 import React from 'react';
 import './ReviewCardRatingSectionStyles.scss';
+import { BoxLogo } from '../../svg/BoxLogo';
+import { DecorLogo } from '../../svg/DecorLogo';
+import { PriceLogo } from '../../svg/PriceLogo';
+import { TasteLogo } from '../../svg/TasteLogo';
+import { OverallLogo } from '../../svg/OverallLogo';
 
 export interface IRatingSectionProps {
   priceVal: number;
@@ -15,25 +20,72 @@ export class ReviewCardRatingSection extends React.Component<IRatingSectionProps
   }
 
   public render() {
+
+    const priceRating = this.generatePriceRating();
+    const tasteRating = this.generateTasteRating();
+    const decorRating = this.generateDecorRating();
+    const boxRating = this.generateBoxRating();
+    const overallRating = this.generateOverallRating();
+    
     return (
       <div className="rating-holder">
+      Ratings
         <div className="rating-object">
-          <p>Price: {this.props.priceVal}/5</p>
+          Taste:{tasteRating}
         </div>
         <div className="rating-object">
-          <p>Taste: {this.props.tasteVal}/5</p>
+          Price:{priceRating}
         </div>
-        {this.props.decorVal   ? <div className="rating-object">
-          <p>Decor: {this.props.decorVal}/5</p>
-        </div> : null}
-        {this.props.boxVal     ? <div className="rating-object">
-          <p>Box: {this.props.boxVal}/5</p>
-        </div> : null} 
         <div className="rating-object">
-          <p>Overall: {this.props.overallVal}/5</p>
+          Decor:{decorRating}
         </div>
-
-      </div>
+        <div className="rating-object">
+          Box:{boxRating}
+        </div>
+        <div className="rating-object">
+          Overall:{overallRating}
+        </div>
+    </div>
     );
+  }
+
+  generatePriceRating() {
+    let content = []
+    for (let i = 0; i < this.props.priceVal; i++) {
+      content.push(<PriceLogo key={i} />);
+    }
+    return content;
+  }
+
+  generateTasteRating() {
+    let content = []
+    for (let i = 0; i < this.props.tasteVal; i++) {
+      content.push(<TasteLogo key={i} />);
+    }
+    return content;
+  }
+
+  generateBoxRating() {
+    let content = []
+    for (let i = 0; i < this.props.boxVal; i++) {
+      content.push(<BoxLogo key={i} />);
+    }
+    return content;
+  }
+
+  generateDecorRating() {
+    let content = []
+    for (let i = 0; i < this.props.decorVal; i++) {
+      content.push(<DecorLogo key={i} />);
+    }
+    return content;
+  }
+
+  generateOverallRating() {
+    let content = []
+    for (let i = 0; i < this.props.overallVal; i++) {
+      content.push(<OverallLogo key={i} />);
+    }
+    return content;
   }
 }

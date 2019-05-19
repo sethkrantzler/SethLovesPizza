@@ -13,3 +13,20 @@
     letter-spacing: 2px;
     text-shadow: -1px 0 $text-color3, 0 1px $text-color3, 1px 0 $text-color3, 0 -1px $text-color3, 2px -2px 0px #969696, 4px -4px 0px #fee3a4;
 }
+
+@media (min-device-width : 100px) 
+and (max-device-width : 1000px)  { 
+    .load-screen{
+        background: none;
+        margin: 1em;
+    }
+    
+    .load-screen-title {
+        text-transform: uppercase;
+        font-style: italic;
+        font-size: 2em;
+        color: $black-color1;
+        letter-spacing: 2px;
+        text-shadow: -1px 0 $text-color3, 0 1px $text-color3, 1px 0 $text-color3, 0 -1px $text-color3, 2px -2px 0px #969696, 4px -4px 0px #fee3a4;
+    }
+}

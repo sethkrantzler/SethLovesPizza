@@ -1,6 +1,7 @@
 import React from 'react';
 import {ReviewCardRatingSection} from '../ReviewCardRatingSection/ReviewCardRatingSection';
 import './ReviewCardStyles.scss';
+import LogoHr from '../LogoHr/LogoHr';
 
 export interface IReviewCardProps {
   name: string;
@@ -53,6 +54,7 @@ export class ReviewCard extends React.Component<IReviewCardProps, any> {
             </div>
             <p className="review-card-review">{ this.props.reviewBody }</p>
           </div>
+          <LogoHr />
         {this.props.rating}
         </div>}
       </div>

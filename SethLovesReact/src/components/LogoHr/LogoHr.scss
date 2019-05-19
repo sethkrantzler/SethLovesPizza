@@ -1,0 +1,30 @@
+@import '../../styles/palette.scss';
+
+#logo-span{
+    overflow: hidden;
+    text-align: center;
+    margin:0px 5px 0px 5px;
+
+    svg{
+        height: 20px;
+        width: 20px;
+    }
+    :before,
+    :after {
+        background-color: #000;
+        content: "";
+        display: inline-block;
+        height: 1px;
+        position: relative;
+        vertical-align: middle;
+        width: 50%;
+    }
+    :before {
+        right: 0.5em;
+        margin-left: -50%;
+    }
+    :after {
+        left: 0.5em;
+        margin-right: -50%;
+    }
+}

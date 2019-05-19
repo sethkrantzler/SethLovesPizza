@@ -24,6 +24,7 @@ export default class HomePage extends React.Component<any, any> {
                 overallVal = {data.valueRanges[0].values[row][13]}
                 />
                 let reviewCard: JSX.Element = <ReviewCard 
+                key = {row}
                 name={data.valueRanges[0].values[row][0]}
                 address={data.valueRanges[0].values[row][1]}
                 neighborhoodLoc={data.valueRanges[0].values[row][2]}
