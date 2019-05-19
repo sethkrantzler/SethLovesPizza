@@ -12,6 +12,7 @@ export interface IRatingSectionProps {
   decorVal: number;
   boxVal: number;
   overallVal: number;
+  description: string;
 }
 
 export class ReviewCardRatingSection extends React.Component<IRatingSectionProps, any> {
@@ -42,6 +43,9 @@ export class ReviewCardRatingSection extends React.Component<IRatingSectionProps
         <div className="rating-object">
           Box:{boxRating}
         </div>
+        <p className="rating-card-description">
+          {this.props.description}
+        </p>
         <div className="rating-object">
           Overall:{overallRating}
         </div>
@@ -66,7 +70,10 @@ export class ReviewCardRatingSection extends React.Component<IRatingSectionProps
   }
 
   generateBoxRating() {
-    let content = []
+    let content = [];
+    if (this.props.priceVal < 0) {
+      return content.push();
+    }
     for (let i = 0; i < this.props.boxVal; i++) {
       content.push(<BoxLogo key={i} />);
     }

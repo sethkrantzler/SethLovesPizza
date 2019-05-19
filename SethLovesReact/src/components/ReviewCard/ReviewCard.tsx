@@ -9,7 +9,6 @@ export interface IReviewCardProps {
   neighborhoodLoc: string;
   hasDelivery: boolean;
   rating: JSX.Element;
-  description: string;
   reviewBody: string;
   imageURL: string;
   dateEaten: Date;
@@ -26,14 +25,7 @@ export class ReviewCard extends React.Component<IReviewCardProps, any> {
     this.OnPizzaBoxClick = this.OnPizzaBoxClick.bind(this);
   }
 
-  scrollToRef = () => {
-      if (!this.ReviewRef.current) return;
-      window.scrollTo(0, this.ReviewRef.current.getBoundingClientRect().top + window.pageYOffset);
-      
-  };
-
   OnPizzaBoxClick() : void {
-    this.scrollToRef();
     this.setState({isOpen: !this.state.isOpen, className: !this.state.isOpen ? "review-card-open" : "review-card-closed"});
   }
 
@@ -45,7 +37,6 @@ export class ReviewCard extends React.Component<IReviewCardProps, any> {
         {this.state.isOpen && 
         <div>
           <h1 className="review-card-name" onClick={this.OnPizzaBoxClick}>{ this.props.name }</h1>
-          <p className="review-card-description">{ this.props.description }</p>
           <div>
             <img className="review-card-img" src={this.props.imageURL}/>
             <div className="review-card-location-info">

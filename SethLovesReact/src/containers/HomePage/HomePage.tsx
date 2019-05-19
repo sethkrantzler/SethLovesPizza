@@ -13,14 +13,15 @@ export default class HomePage extends React.Component<any, any> {
     componentDidMount(): void{
         const API = 'https://sheets.googleapis.com/v4/spreadsheets/1K0GcnJTFXXqIMGyD1-Ev_tdBW90XZsHugZlop45_6oA/values:batchGet?ranges=Sheet1&majorDimension=ROWS&key=AIzaSyCROwY_A9JF1hRCM19tH9CiEXSb9nRbeQY'
         fetch(API).then(response => response.json()).then((data)=>{
-            console.log(data.value)
+            console.log(data)
             let reviewCards: Array<JSX.Element> = [];
             for (let row=1; row<data.valueRanges[0].values.length; row++) {
                 let reviewCardRatingSection: JSX.Element = <ReviewCardRatingSection 
+                description={data.valueRanges[0].values[row][4]}
                 priceVal = {data.valueRanges[0].values[row][9]}
-                boxVal = {data.valueRanges[0].values[row][10]}
-                tasteVal = {data.valueRanges[0].values[row][11]}
-                decorVal = {data.valueRanges[0].values[row][12]}
+                tasteVal = {data.valueRanges[0].values[row][10]}
+                decorVal = {data.valueRanges[0].values[row][11]}
+                boxVal = {data.valueRanges[0].values[row][12]}
                 overallVal = {data.valueRanges[0].values[row][13]}
                 />
                 let reviewCard: JSX.Element = <ReviewCard 
@@ -29,7 +30,6 @@ export default class HomePage extends React.Component<any, any> {
                 address={data.valueRanges[0].values[row][1]}
                 neighborhoodLoc={data.valueRanges[0].values[row][2]}
                 hasDelivery={data.valueRanges[0].values[row][3]}
-                description={data.valueRanges[0].values[row][4]}
                 reviewBody={data.valueRanges[0].values[row][5]}
                 imageURL={data.valueRanges[0].values[row][6]}
                 dateEaten={data.valueRanges[0].values[row][7]}

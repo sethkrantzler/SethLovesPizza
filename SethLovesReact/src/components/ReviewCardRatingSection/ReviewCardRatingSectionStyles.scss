@@ -24,6 +24,11 @@
     text-shadow: 1px -1px 0px rgba(150, 150, 150, 1), 2px -2px 0px #2d2d2d;
 }
 
+.rating-card-description{
+    color: $text-color1;
+    font-size: 2vw;
+}
+
 .rating-object{
     display: flex;
     flex-direction: row;
@@ -32,23 +37,27 @@
     font-weight:400;
     text-transform: uppercase;
     text-shadow: 1px -1px 0px rgba(150, 150, 150, 1), 2px -2px 0px #2d2d2d;
-    margin:5px;
+    margin:5px 35px;
     flex-basis: 100%;
     align-items: center;
 
     svg {
         width: 6vw;
         height: 6vw;
+        padding: 5px;
     }
 }
 @media (min-device-width : 100px) 
 and (max-device-width : 1000px) { 
     .rating-object{
         font-size: 24px;
+        margin:5px 10px;
     
         svg {
             width: 30px;
             height: 30px;
+            padding: 5px;
+
         }
     }
 
