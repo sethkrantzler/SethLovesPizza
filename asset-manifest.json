@@ -1,14 +1,13 @@
 {
-  "main.css": "/static/css/main.21143807.chunk.css",
-  "main.js": "/static/js/main.d700bb41.chunk.js",
-  "main.js.map": "/static/js/main.d700bb41.chunk.js.map",
+  "main.css": "/static/css/main.041cbe24.chunk.css",
+  "main.js": "/static/js/main.0b397e76.chunk.js",
+  "main.js.map": "/static/js/main.0b397e76.chunk.js.map",
   "static/js/1.072cf410.chunk.js": "/static/js/1.072cf410.chunk.js",
   "static/js/1.072cf410.chunk.js.map": "/static/js/1.072cf410.chunk.js.map",
   "runtime~main.js": "/static/js/runtime~main.229c360f.js",
   "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
-  "static/media/ReviewCardStyles.scss": "/static/media/PizzaBox.68699780.png",
-  "static/css/main.21143807.chunk.css.map": "/static/css/main.21143807.chunk.css.map",
+  "static/css/main.041cbe24.chunk.css.map": "/static/css/main.041cbe24.chunk.css.map",
   "index.html": "/index.html",
-  "precache-manifest.4675edc26039db9aee60df9ec6270908.js": "/precache-manifest.4675edc26039db9aee60df9ec6270908.js",
+  "precache-manifest.aa1cb0e4c2f8c6a80a583c695d046d47.js": "/precache-manifest.aa1cb0e4c2f8c6a80a583c695d046d47.js",
   "service-worker.js": "/service-worker.js"
 }
