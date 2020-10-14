@@ -13,7 +13,6 @@ export default class HomePage extends React.Component<any, any> {
     componentDidMount(): void{
         const API = 'https://sheets.googleapis.com/v4/spreadsheets/1K0GcnJTFXXqIMGyD1-Ev_tdBW90XZsHugZlop45_6oA/values:batchGet?ranges=Sheet1&majorDimension=ROWS&key=AIzaSyCROwY_A9JF1hRCM19tH9CiEXSb9nRbeQY'
         fetch(API).then(response => response.json()).then((data)=>{
-            console.log(data)
             let reviewCards: Array<JSX.Element> = [];
             for (let row=1; row<data.valueRanges[0].values.length; row++) {
                 let reviewCardRatingSection: JSX.Element = <ReviewCardRatingSection 

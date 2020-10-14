@@ -1,16 +1,5 @@
 @import '../../styles/palette.scss';
 
-
-.rating-object{
-    flex-basis: 33%;
-
-    p{
-        margin: 0;
-        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-
-    }
-}
-
 .rating-holder{
     display:flex;
     margin: 0;
@@ -21,11 +10,22 @@
     font-size: 6vw;
     font-weight:400;
     text-transform: uppercase;
-    text-shadow: 1px -1px 0px rgba(150, 150, 150, 1), 2px -2px 0px #2d2d2d;
-}
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, 2px -2px 0px #969696, 4px -4px 0px #2d2d2d;}
 
 .rating-card-description{
     font-size: 1.8vw;
+    text-shadow: 0.5px -0.5px 0px rgba(150, 150, 150, 1), 1px -1px 0px #2d2d2d;
+
+    p {
+        margin: 1em 2.5em;
+    }
+}
+
+p {
+    .rating-card-description{
+        font-size: 1.8vw;
+        text-shadow: 0.5px -0.5px 0px rgba(150, 150, 150, 1), 1px -1px 0px #2d2d2d;
+    }
 }
 
 .rating-object{
@@ -36,9 +36,34 @@
     font-weight:400;
     text-transform: uppercase;
     text-shadow: 1px -1px 0px rgba(150, 150, 150, 1), 2px -2px 0px #2d2d2d;
-    margin:5px 35px;
     flex-basis: 100%;
+    align-items: center; 
+    padding: 0px 5px;
+
+    svg {
+        width: 6vw;
+        height: 6vw;
+        padding: 5px;
+    }
+
+    p{
+        margin: 0;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+    }
+}
+
+.rating-object-overall{
+    display: flex;
+    flex-direction: row;
+    color: $text-color3;
+    font-size: 4vw;
+    font-weight:400;
+    text-transform: uppercase;
+    text-shadow: 1px -1px 0px rgba(150, 150, 150, 1), 2px -2px 0px #2d2d2d;
+    margin:5px 35px;
     align-items: center;
+    justify-content: center;
 
     svg {
         width: 6vw;
@@ -61,8 +86,6 @@ and (max-device-width : 1000px) {
     }
 
     .rating-card-description{
-        text-shadow: 1px -1px 0px #2d2d2d;
+        text-shadow: 1px -1px 0px rgba(150, 150, 150, 1), 2px -2px 0px #2d2d2d;
     }
-
-
 }

@@ -46,7 +46,7 @@ export class ReviewCardRatingSection extends React.Component<IRatingSectionProps
         <p className="rating-card-description">
           {this.props.description}
         </p>
-        <div className="rating-object">
+        <div className="rating-object-overall">
           Overall:{overallRating}
         </div>
     </div>
